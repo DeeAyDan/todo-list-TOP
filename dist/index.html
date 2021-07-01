@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+</head>
+<body>
+
+    <div id="content">
+        <div id="control-panel">
+
+            <div id="title-box" class="unselectable">
+                <img id="main-icon" src="../src/imgs/main-icon.png">
+                <img id="title" src="../src/imgs/title.png">
+            </div>
+
+            <button id="all-list" class="control-button">All lists</button>
+            <button id="all-todos" class="control-button">All todos</button>
+
+            <div id="list-manager" class="unselectable">
+                <p>List manager</p>
+            </div>
+
+            <div id="lists">
+
+                <div>
+                    <button class="control-button">Morning routine</button>
+                    <button class="delete-list">Delete</button>
+                </div>
+
+            </div>
+            
+            <div>
+                <button id="add-button" class="control-button">Add List</button>
+            </div>
+        </div>
+
+        <div id="display">
+
+            <div id="display-title">
+                <p>Morning routine</p>
+            </div>
+
+            <div id="display-content">
+                <div class="display-element odd">
+                    <div class="priority low-priority"></div>
+                    <p class="display-todo">Make bed</p>
+                    <button class="delete-todo">Delete</button>
+                </div>
+                <div class="display-element even">
+                    <div class="priority high-priority"></div>
+                    <p class="display-todo">Brush teeth</p>
+                    <button class="delete-todo">Delete</button>
+                </div>
+                <div class="display-element odd">
+                    <div class="priority high-priority"></div>
+                    <p class="display-todo">Drink water</p>
+                    <button class="delete-todo">Delete</button>
+                </div>
+                <div class="display-element even">
+                    <div class="priority medium-priority"></div>
+                    <p class="display-todo">Read emails</p>
+                    <button class="delete-todo">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="unselectable">
+        <p>Copyright © 2021 deeaydan</p>
+        <a href="https://github.com/DeeAyDan/"><img id="github-icon" src="../src/imgs/github-logo.png"></a>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

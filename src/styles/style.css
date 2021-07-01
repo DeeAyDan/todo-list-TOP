@@ -34,7 +34,19 @@
     font-weight: bold;
     font-size: 100%;
 }
-
+.delete-list{
+    position: absolute;
+    right: 0%;
+    height: 5%;
+    width: 20%;
+    border: none;
+    background: none;
+    color: #ee5353;
+    font-weight: bold;
+}
+.delete-list:hover{
+    background: #510a0a;
+}
 #footer {
     background: black;
     color: white;
@@ -46,7 +58,7 @@
     left: 0px;
     bottom: 0px;
     margin-bottom: 0px;
-    position: absolute;
+    position: fixed;
 }
 #github-icon{
     padding-left: 25px;
@@ -83,7 +95,7 @@
 }
 
 #display-content{
-    background: #510A32;
+    
     margin-top: 3%;
     margin-left: 23%;
     margin-right: 3%;
@@ -95,11 +107,61 @@
 }
 
 .high-priority{
-    background: #801336;
+    background: #801313;
+}
+.high-priority:hover{
+    box-shadow: 0px 0px 10px 2px #801313;
 }
 .medium-priority{
-    background: #C72C41;
+    background: #c7b02c;
+}
+.medium-priority:hover{
+    box-shadow: 0px 0px 10px 2px #c7b02c;
 }
 .low-priority{
-    background: #EE4540;
+    background: #53ee65;
+}
+.low-priority:hover{
+    box-shadow: 0px 0px 10px 2px #53ee65;
+}
+.display-element{
+    display: flex;
+    position: relative;
+}
+.display-todo{
+    margin-left: 20%;
+    color: wheat;
+    font-weight: bold;
+    font-size: 1.2vw;
+}
+.delete-todo{
+    background: none;
+    border: none;
+    color: #ee5353;
+    font-size: 1.3vw;
+    font-weight: bold;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    right: 5%;
+    align-self: center;
+}
+.delete-todo:hover{
+    background: #510a0a;
+}
+.priority{
+    height: 2.5vh;
+    width: 2.5vh;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+    border-radius: 50%;
+}
+.odd{
+    background: #612b5d;
+}
+.even{
+    background: #5c365a;
 }
