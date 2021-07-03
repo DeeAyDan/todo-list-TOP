@@ -7,15 +7,15 @@
     top: 0px;
     position:absolute;
     background: #2d142cc2;}
+#title-box{
+    justify-content: center;
+    display: flex;
+    padding-bottom: 5%;}
 #control-panel{
     background: #2D142C;
     height: 100%;
     width: 20%;
     position: absolute;}
-#title-box{
-    justify-content: center;
-    display: flex;
-    padding-bottom: 5%;}
 .control-button{
     width: 100%;
     height: 5%;
@@ -23,17 +23,12 @@
     color: wheat;
     border: none;
     font-weight: bolder;
-    font-size: 100%;
-}
-.control-button:hover{
-    background: #510A32;
-}
+    font-size: 100%;}
 #list-manager{
     text-align: center;
     color: white;
     font-weight: bold;
-    font-size: 100%;
-}
+    font-size: 100%;}
 .delete-list{
     position: absolute;
     right: 0%;
@@ -42,43 +37,15 @@
     border: none;
     background: none;
     color: #ee5353;
-    font-weight: bold;
-}
-.delete-list:hover{
-    background: #510a0a;
-}
-#footer {
-    background: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 32px;
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
-    margin-bottom: 0px;
-    position: fixed;
-}
-#github-icon{
-    padding-left: 25px;
-}
-.unselectable{
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
+    font-weight: bold;}
 #add-button{
-    color: #53ee64;
-}
-
-#add-button:hover{
-    background: #53ee655d;
-}
+    color: #53ee64;}
+#list-input{
+    width: 90%;
+    left: 5%;
+    position: relative;
+    border-radius: 5px;
+    margin-top: 5%;}
 
 #display-title{
     background: #510A32;
@@ -92,49 +59,40 @@
     font-size: 150%;
     font-weight: bold;
     color: wheat;
-    position: relative;
-}
-
-#display-content{
-    
+    position: relative;}
+#add-todo-button{
+    position: absolute;
+    right: 5%;
+    display: grid;
+    align-self: center;
+    color: #53ee64;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 2vw;
+    justify-content: center;
+    align-content: center;}
+#display-content{ 
     margin-top: 3%;
     margin-left: 23%;
     margin-right: 3%;
-    margin-bottom: 0%;
-}
-
-.active{
-    background: #510A32;
-}
-
-.high-priority{
-    background: #801313;
-}
-.high-priority:hover{
-    box-shadow: 0px 0px 10px 2px #801313;
-}
-.medium-priority{
-    background: #c7b02c;
-}
-.medium-priority:hover{
-    box-shadow: 0px 0px 10px 2px #c7b02c;
-}
-.low-priority{
-    background: #53ee65;
-}
-.low-priority:hover{
-    box-shadow: 0px 0px 10px 2px #53ee65;
-}
+    margin-bottom: 0%;}
 .display-element{
     display: flex;
+    position: relative;}
+.priority{
+    height: 2.5vh;
+    width: 2.5vh;
     position: relative;
-}
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+    border-radius: 50%;}
 .display-todo{
     margin-left: 20%;
     color: wheat;
     font-weight: bold;
-    font-size: 1.2vw;
-}
+    font-size: 1.2vw;}
 .delete-todo{
     background: none;
     border: none;
@@ -147,39 +105,101 @@
     align-content: center;
     right: 5%;
     align-self: center;
-    height: 100%;
-}
-.delete-todo:hover{
-    background: #510a0a;
-}
-.priority{
-    height: 2.5vh;
-    width: 2.5vh;
-    position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 5%;
-    border-radius: 50%;
-}
+    height: 100%;}
 .odd{
-    background: #612b5d;
-}
+    background: #612b5d;}
 .even{
-    background: #5c365a;
-}
-#add-todo-button{
-    position: absolute;
-    right: 5%;
-    display: grid;
-    align-self: center;
-    color: #53ee64;
-    background: none;
-    border: none;
-    font-weight: bold;
-    font-size: 2vw;
+    background: #5c365a;}
+.high-priority{
+    background: #801313;}
+.medium-priority{
+        background: #c7b02c;}
+.low-priority{
+        background: #53ee65;}
+
+.active{
+    background: #510A32;}
+
+#footer {
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-content: center;
-}
+    height: 32px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    margin-bottom: 0px;
+    position: fixed;}
+#github-icon{
+    padding-left: 25px;}
+.unselectable{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
+
+.control-button:hover{
+    background: #510A32;}
+.delete-list:hover{
+    background: #510a0a;}
+#add-button:hover{
+    background: #53ee655d;}
+.high-priority:hover{
+    box-shadow: 0px 0px 10px 2px #801313;}
+.medium-priority:hover{
+    box-shadow: 0px 0px 10px 2px #c7b02c;}
+.low-priority:hover{
+    box-shadow: 0px 0px 10px 2px #53ee65;}
+.delete-todo:hover{
+    background: #510a0a;}
 #add-todo-button:hover{
-    background: #53ee655d;
-}
+    background: #53ee655d;}
+
+#form-background{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;}
+#form{
+    position: fixed;
+    width: 30%;
+    height: 60%;
+    background: #510a0a;
+    left: 35%;
+    top: 20%;
+    box-shadow: 0px 0px 20px 20px #2d142c;
+    display: none;}
+#form-title{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 0px;
+    text-shadow: 2px 2px black;
+    color: wheat;}
+.form-todo-name{
+    justify-content: center;
+    display: grid;
+    color: wheat;
+    font-weight: bold;}
+#add-todo-input{
+    width: 80%;
+    left: 10%;
+    position: relative;}
+#submit-button{
+    position: absolute;
+    right: 10;
+    bottom: 10;
+    background: #53ee64;
+    border: none;
+    color: wheat;
+    font-weight: bold;
+    height: 8vh;
+    width: 8vw;}
+#radio-section{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+    color: wheat;}
