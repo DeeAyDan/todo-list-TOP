@@ -92,6 +92,7 @@
     font-size: 150%;
     font-weight: bold;
     color: wheat;
+    position: relative;
 }
 
 #display-content{
@@ -146,6 +147,7 @@
     align-content: center;
     right: 5%;
     align-self: center;
+    height: 100%;
 }
 .delete-todo:hover{
     background: #510a0a;
@@ -164,4 +166,20 @@
 }
 .even{
     background: #5c365a;
+}
+#add-todo-button{
+    position: absolute;
+    right: 5%;
+    display: grid;
+    align-self: center;
+    color: #53ee64;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 2vw;
+    justify-content: center;
+    align-content: center;
+}
+#add-todo-button:hover{
+    background: #53ee655d;
 }
