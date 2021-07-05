@@ -1,21 +1,23 @@
-function formPopUp(){
+import hideForm from './hide-form'
+
+export default function formPopUp(){
+    const content = document.querySelector('body');
+
     const formBackgroundDiv = document.createElement('div');
     formBackgroundDiv.setAttribute('id', 'form-background');
+    content.appendChild(formBackgroundDiv);
 
     const formWraperDiv = document.createElement('div');
     formWraperDiv.setAttribute('id', 'form');
     formBackgroundDiv.appendChild(formWraperDiv);
 
-    const formItself = document.createElement('form');
-    formWraperDiv.appendChild(formItself);
-
     const formTitle = document.createElement('p');
     formTitle.setAttribute('id', 'form-title');
     formTitle.textContent = 'Add todo';
-    formItself.appendChild(formTitle);
+    formWraperDiv.appendChild(formTitle);
 
     const todoWraper = document.createElement('div');
-    formItself.appendChild(todoWraper);
+    formWraperDiv.appendChild(todoWraper);
 
     const todoName = document.createElement('p');
     todoName.classList.add('form-todo-name');
@@ -29,7 +31,7 @@ function formPopUp(){
 
     const radioWraper = document.createElement('div');
     radioWraper.setAttribute('id', 'radio-section');
-    formItself.appendChild(radioWraper);
+    formWraperDiv.appendChild(radioWraper);
 
     const radioName = document.createElement('p');
     radioName.classList.add('form-todo-name');
@@ -81,9 +83,24 @@ function formPopUp(){
     const break3 = document.createElement('br');
     radioWraper.appendChild(break3);
 
-    const submitButton = document.createElement('imput');
+    const submitButton = document.createElement('button');
     submitButton.setAttribute('id', 'submit-button');
-    submitButton.setAttribute('type', 'submit');
-    submitButton.setAttribute('value', 'Add');
-    formItself.appendChild(submitButton);
+    submitButton.textContent = 'Add';
+    formWraperDiv.appendChild(submitButton);
+
+    const cancelButton = document.createElement('button');
+    cancelButton.setAttribute('id', 'cancel-button');
+    cancelButton.textContent = 'Cancel';
+    formWraperDiv.appendChild(cancelButton);
+
+    cancelButton.addEventListener('click', function(e){
+        hideForm();
+    })
+
+    blurringContent();
+}
+
+function blurringContent(){
+    const content = document.querySelector('#content');
+    content.setAttribute('style', 'filter:blur(8px)');
 }

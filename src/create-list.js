@@ -12,6 +12,7 @@ export default function createList(){
 
         const controlButton = document.createElement('button');
         controlButton.classList.add('control-button');
+        controlButton.classList.add('list-button');
         wraperDiv.appendChild(controlButton);
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('delete-list');
