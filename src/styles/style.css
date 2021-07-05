@@ -72,7 +72,7 @@
     font-size: 2vw;
     justify-content: center;
     align-content: center;}
-#display-content{ 
+.display-content{ 
     margin-top: 3%;
     margin-left: 23%;
     margin-right: 3%;
@@ -93,6 +93,14 @@
     color: wheat;
     font-weight: bold;
     font-size: 1.2vw;}
+.display-all-lists-and-all-todos{
+    color: wheat;
+    font-weight: bold;
+    font-size: 1.2vw;
+    height: 50px;
+    align-content: center;
+    display: grid;
+    padding-left: 5%;}
 .delete-todo{
     background: none;
     border: none;
@@ -162,16 +170,17 @@
 #form-background{
     position: fixed;
     width: 100vw;
-    height: 100vh;}
+    height: 100vh;
+    z-index: 2;}
 #form{
     position: fixed;
     width: 30%;
     height: 60%;
-    background: #510a0a;
+    background: #2d142c;
     left: 35%;
     top: 20%;
-    box-shadow: 0px 0px 20px 20px #2d142c;
-    display: none;}
+    box-shadow: 0px 0px 20px 20px #510a32;
+    z-index: 3;}
 #form-title{
     text-align: center;
     font-size: 36px;
@@ -192,7 +201,17 @@
     position: absolute;
     right: 10;
     bottom: 10;
-    background: #53ee64;
+    background: #53ee65a4;
+    border: none;
+    color: wheat;
+    font-weight: bold;
+    height: 8vh;
+    width: 8vw;}
+#cancel-button{
+    position: absolute;
+    left: 10;
+    bottom: 10;
+    background: #510a0abe;
     border: none;
     color: wheat;
     font-weight: bold;
