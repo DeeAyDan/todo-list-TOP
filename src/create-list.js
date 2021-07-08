@@ -1,7 +1,7 @@
-export default function createList(){
+export default function createList(newListName){
     const listContainer = document.querySelector('#lists');
     const input = document.getElementById('list-input');
-    const newListName = document.getElementById('list-input').value;
+    const newlistId = newListName.toLowerCase().replace(/\s/g, '');
 
     if (newListName === ''){
         alert('List name can not be empty.');
@@ -12,7 +12,9 @@ export default function createList(){
 
         const controlButton = document.createElement('button');
         controlButton.classList.add('control-button');
+        controlButton.classList.add('active-button');
         controlButton.classList.add('list-button');
+        controlButton.id = newlistId;
         wraperDiv.appendChild(controlButton);
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('delete-list');
