@@ -1,4 +1,5 @@
 import hideForm from './hide-form'
+import createToDo from './create-todo'
 
 export default function formPopUp(){
     const content = document.querySelector('body');
@@ -94,6 +95,11 @@ export default function formPopUp(){
     formWraperDiv.appendChild(cancelButton);
 
     cancelButton.addEventListener('click', function(e){
+        hideForm();
+    })
+
+    submitButton.addEventListener('click', function(e){
+        createToDo();
         hideForm();
     })
 

@@ -1,16 +1,33 @@
 import './styles/style.css';
-import createList from './create-list'
 import formPopUp from './pop-up-form'
-import displayAllLists from './display-all-lists'
+import deleteTodo from './delete-todo'
+import deleteList from './delete-list'
+import changePriority from './change-priority'
+import createList from './create-list'
 import displayCurrentList from './display-active-list'
+import displayAllLists from './display-all-lists'
 
-createList('Morning routine');
-displayCurrentList();
+deleteTodo();
+deleteList();
+changePriority();
 
+const addToDoButton = document.querySelector('#add-todo-button');
 const addListButton = document.querySelector('#add-button');
 const addListInput = document.querySelector('#list-input');
-const addTodoButton = document.querySelector('#add-todo-button');
 const allListsButton = document.querySelector('#all-list');
+const morningRoutineButton = document.querySelector('#default-list');
+
+morningRoutineButton.addEventListener('click', e => {
+    displayCurrentList();
+})
+
+allListsButton.addEventListener('click', e => {
+    displayAllLists();
+})
+
+addToDoButton.addEventListener('click', e => {
+    formPopUp();
+})
 
 addListButton.addEventListener('click', function(e){
     const newListName = document.getElementById('list-input').value;
@@ -25,11 +42,3 @@ addListInput.addEventListener('keyup', function(event){
         displayCurrentList();
     }
 });
-
-addTodoButton.addEventListener('click', function(e){
-    formPopUp();
-})
-
-allListsButton.addEventListener('click', function(e){
-    displayAllLists();
-})

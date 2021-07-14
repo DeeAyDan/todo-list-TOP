@@ -3,6 +3,7 @@ export default function displayAllLists(){
     deleteAddTodoButton();
     hideAllDisplayConent();
     createDisplayContentAllLists();
+    setButtonHighlight();
 }
 
 function displayTitleAllLists(){
@@ -34,8 +35,8 @@ function createDisplayContentAllLists(){
         fillDisplayContentAllLists();
         return;
     }
-    fillDisplayContentAllLists();
     displayContentList.style.display = 'block';
+    fillDisplayContentAllLists();
 }
 
 function fillDisplayContentAllLists(){
@@ -63,4 +64,18 @@ function fillDisplayContentAllLists(){
             odd = true;
         }
     })
+}
+
+function setButtonHighlight(){
+    const controlButtons = document.querySelectorAll('.list-button');
+
+    controlButtons.forEach(element => {
+        element.classList.remove('active');
+    })
+    setAllListButtonActive();
+}
+
+function setAllListButtonActive(){
+    const allListButton = document.querySelector('#all-list');
+    allListButton.classList.add('active');
 }
